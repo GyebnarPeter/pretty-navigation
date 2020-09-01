@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Gayathri&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Gayathri', sans-serif;
+    background: #c4fafa;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: white;
+    transition: .5s;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-nav > ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.main-nav > ul > li {
+    height: 50px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.main-nav ul li:hover {
+    background: skyblue;
+}
+
+.submenu {
+    width: 100vw;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding: 50px 0;
+    display: flex;
+    background: skyblue;
+    transition: .5s;
+    display: none;
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+.submenu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.submenu ul li {
+    margin: 50px 0;
+}
+
+.subnav:hover .submenu {
+    display: flex;
+}
+
+.sub_1, .sub_2, .sub_3, .sub_4, .sub_5, .sub_6 {
+    display: none;
+    transition: 1s;
+}
+
+.active {
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.nav-column-1 {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.nav-column-2 {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.nav-column-3 {
+    display: flex;
+    justify-content: center;
+    flex-grow: 3;
+    flex-basis: 0;
+}
+
+.line {
+    width: 1px;
+    height: 100%;
+    background: black;
+}
+
+.triangle {
+    position: relative;
+    transition: .5s;
+    margin-top: 43px;
+}
+
+.left-border {
+    height: 25px;
+    width: 1px;
+    background: skyblue;
+}
+
+.top-border {
+    width: 25px;
+    height: 1px;
+    background: black;
+    position: absolute;
+    top: 6px;
+    left: -1px;
+    transform: rotate(29deg);
+}
+
+.bottom-border {
+    width: 25px;
+    height: 1px;
+    background: black;
+    position: absolute;
+    bottom: 6px;
+    left: -1px;
+    transform: rotate(-29deg);
+}
