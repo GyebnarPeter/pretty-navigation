@@ -9,20 +9,30 @@
 <body>
     
     <nav>
+        <div class="nav-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <div class="main-nav">
+            <div class="nav-controls-buttons">
+                <div class="nav-back-btn">&lt;&lt;</div>
+                <div class="nav-close-btn">X</div>
+            </div>
             <ul>
                 <li><a href="#">menu 1</a></li>
                 <li class="subnav">
                     <a href="#">menu 2</a>
+                    <span>&gt;</span>
                     <div class="submenu">
                         <div class="nav-column-1">
                             <ul>
-                                <li><a href="#" data-submenu=".sub_1">submenu 1</a></li>
-                                <li><a href="#" data-submenu=".sub_2">submenu 2</a></li>
-                                <li><a href="#" data-submenu=".sub_3">submenu 3</a></li>
-                                <li><a href="#" data-submenu=".sub_4">submenu 4</a></li>
-                                <li><a href="#" data-submenu=".sub_5">submenu 5</a></li>
-                                <li><a href="#" data-submenu=".sub_6">submenu 6</a></li>
+                                <li id="sub1"><a href="#" data-submenu=".sub_1">submenu 1</a><ul></ul></li>
+                                <li id="sub2"><a href="#" data-submenu=".sub_2">submenu 2</a><ul></ul></li>
+                                <li id="sub3"><a href="#" data-submenu=".sub_3">submenu 3</a><ul></ul></li>
+                                <li id="sub4"><a href="#" data-submenu=".sub_4">submenu 4</a><ul></ul></li>
+                                <li id="sub5"><a href="#" data-submenu=".sub_5">submenu 5</a><ul></ul></li>
+                                <li id="sub6"><a href="#" data-submenu=".sub_6">submenu 6</a><ul></ul></li>
                             </ul>
                         </div>
                         <div class="nav-column-2">

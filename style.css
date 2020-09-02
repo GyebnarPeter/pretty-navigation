@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Gayathri&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: 'Gayathri', sans-serif;
@@ -68,6 +72,11 @@ nav {
 
 .subnav:hover .submenu {
     display: flex;
+}
+
+.subnav span {
+    float: right;
+    display: none;
 }
 
 .sub_1, .sub_2, .sub_3, .sub_4, .sub_5, .sub_6 {
@@ -147,4 +156,176 @@ nav {
     bottom: 6px;
     left: -1px;
     transform: rotate(-29deg);
+}
+
+.nav-btn {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-btn span {
+    width: 30px;
+    height: 2px;
+    background: black;
+    display: block;
+}
+
+.nav-btn span:nth-child(2) {
+    margin: 5px 0;
+    width: 26px;
+}
+
+.nav-btn span:nth-child(3) {
+    width: 22px;
+}
+
+.nav-buttons {
+    display: none;
+}
+
+.nav-controls-buttons {
+    display: none;
+}
+
+
+
+
+@media (max-width: 1200px) {
+
+    nav {
+        justify-content: flex-start;
+        padding-left: 30px;
+        transition: .5s;
+    }
+    
+    .main-nav {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 400px;
+        height: 100vh;
+        background: white;
+        transform: translateX(-400px);
+        transition: .5s;
+    }
+
+    .toggle {
+        transform: translateX(0);
+        transition: .5s;
+    }
+
+    .nav-btn {
+        display: block;
+    }
+
+    .nav-controls-buttons {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 60px;
+    }
+
+    .nav-back-btn {
+        cursor: pointer;
+        opacity: 0;
+    }
+
+    .nav-close-btn {
+        display: block;
+        cursor: pointer;
+    }
+
+    .main-nav > ul {
+        display: block;
+        padding-right: 60px;
+    }
+
+    .main-nav > ul > li {
+        height: initial;
+        width: unset;
+        display: block;
+        cursor: pointer;
+        margin: 0 0 30px 60px;
+        border-bottom: 1px solid lightgrey;
+    }
+
+    .main-nav > ul > li:hover {
+        background: none;
+        color: skyblue;
+    }
+
+    .main-nav > ul > li a:hover {
+        color: skyblue;
+    }
+
+    .subnav:hover .submenu {
+        display: none;
+    }
+
+    .subnav span {
+        display: block;
+    }
+
+    .submenu {
+        background: white;
+        width: 40px;
+    }
+
+    .nav-column-1 {
+        display: block;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 400px;
+        height: 100vh;
+        background: white;
+        transition: .5s;
+        overflow: scroll;
+    }
+
+    .nav-column-1 ul li {
+        height: initial;
+        width: unset;
+        display: block;
+        cursor: pointer;
+        margin: 0 0 30px 60px;
+        margin-right: 60px;
+        border-bottom: 1px solid lightgrey;
+    }
+
+    .nav-column-1 ul li:hover {
+        background: white;
+    }
+
+    #sub1 ul, #sub2 ul, #sub3 ul, #sub4 ul, #sub5 ul, #sub6 ul {
+        display: none;
+        background: white;
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 756px) {
+
+    .main-nav {
+        width: 100%;
+        height: 100vh;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: white;
+        transform: translateX(-100%);
+        transition: .5s;
+    }
+
+    .toggle {
+        transform: translateX(0);  
+    }
+
+    .nav-column-1 {
+        width: 100%;
+    }
 }
